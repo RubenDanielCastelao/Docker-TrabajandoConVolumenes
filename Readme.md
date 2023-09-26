@@ -42,3 +42,25 @@ docker run -di -p 8000:80 -v /home/dam2/Documentos/XSE/HTML:/usr/local/apache2/h
 
 En este caso usaremos un directorio llamado `HTML`.
 
+## 5-.Realiza un 'hola mundo' en HTML y comprueba que accedes desde el navegador.
+
+Crea un archivo HTML simple llamado 'index.html' con el contenido 'Hola Mundo' y colocalo en la carpeta anteriormente indicada, luego accede utilizando la URL http://localhost:8000 y deberías ver la página 'Hola Mundo'.
+
+Este es el HTML usado en este caso:
+
+```html
+<html>
+    <body>
+        <h1>Hola mundo!</h1>
+    </body>
+</html>
+```
+
+## 6-.Crea otro contenedor 'dam_web2' con el mismo volumen y a otro puerto, por ejemplo, 9080.
+
+Para crear un segundo contenedor 'dam_web2' con el mismo volumen y en el puerto 9080, ejecuta el siguiente comando:
+
+```bash
+docker run -di -p 9080:80 -v /home/dam2/Documentos/XSE/HTML:/usr/local/apache2/htdocs/ --name dam_web2 httpd
+```
+
