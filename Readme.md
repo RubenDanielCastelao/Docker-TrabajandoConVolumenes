@@ -64,3 +64,13 @@ Para crear un segundo contenedor 'dam_web2' con el mismo volumen y en el puerto 
 docker run -di -p 9080:80 -v /home/dam2/Documentos/XSE/HTML:/usr/local/apache2/htdocs/ --name dam_web2 httpd
 ```
 
+## 7-.Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultas en el navegador:
+
+Abrimos el navegador con ambos puertos, tal como en el ejemplo inferior, y vemos que en ambos se muestra el mismo 'Hola mundo!'.
+
+- http://tuIP:9080
+- http://tuIP:8000
+
+## 8-.Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
+
+Igual que en la anterior tarea, simplemente modificaremos el HTML y accederemos a los 2 puertos, revisando así que ambas paginás hayan sufrido las modificaciones del HTML.
